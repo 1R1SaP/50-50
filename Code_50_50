@@ -1,0 +1,135 @@
+import random
+
+attempts = 0
+reds = 0
+blues = 0
+firsts = 0
+seconds = 0
+awerses = 0
+reverses = 0
+
+rand = random.randint(0, 1)
+print("Choose a mode: 'Red/Blue' (1), '1/2' (2), 'Awers/Reverse' (3)")
+mode = input(">>> ")
+print("----------------------")
+
+while True:
+    if mode == "1":
+        if rand > 0:
+            if rand == 1:
+                    attempts += 1
+                    reds += 1
+            else:
+                attempts += 1
+                blues += 1
+
+            print("Red")
+            print("Wanna play again? y/n")
+            answer = input()
+            if  answer == 'y':
+                rand = random.randint(0, 1)
+            else:
+                print("----------------------")
+                print('''Attempts: %s, Red: %s, Blue: %s
+Goodbye ;)''' % (attempts, reds, blues))
+                break
+
+        elif rand <= 0:
+            if rand == 1:
+                    attempts += 1
+                    reds += 1
+            else:
+                attempts += 1
+                blues += 1
+
+            print("Blue")
+            print("Wanna play again? y/n")
+            answer1 = input()
+            if  answer1 == 'y':
+                rand = random.randint(0, 1)
+            else:
+                print("----------------------")
+                print('''Attempts: %s, Red: %s, Blue: %s
+Goodbye ;)''' % (attempts, reds, blues))
+                break
+
+    elif mode == "2":
+        if rand > 0:
+            if rand == 1:
+                    attempts += 1
+                    firsts += 1
+            else:
+                attempts += 1
+                seconds += 1
+
+            print("1")
+            print("Wanna play again? y/n")
+            answer = input()
+            if  answer == 'y':
+                rand = random.randint(0, 1)
+            else:
+                print("----------------------")
+                print('''Attempts: %s, Firsts: %s, Seconds: %s
+Goodbye ;)''' % (attempts, firsts, seconds))
+                break
+
+        elif rand <= 0:
+            if rand == 1:
+                    attempts += 1
+                    firsts += 1
+            else:
+                attempts += 1
+                seconds += 1
+
+            print("2")
+            print("Wanna play again? y/n")
+            answer1 = input()
+            if  answer1 == 'y':
+                rand = random.randint(0, 1)
+            else:
+                print("----------------------")
+                print('''Attempts: %s, Firsts: %s, Seconds: %s
+Goodbye ;)''' % (attempts, firsts, seconds))
+                break
+
+    elif mode == "3":
+        if rand > 0:
+            if rand == 1:
+                attempts += 1
+                awerses += 1
+            else:
+                attempts += 1
+                reverses += 1
+
+            print("Awers")
+            print("Wanna play again? y/n")
+            answer = input()
+            if  answer == 'y':
+                rand = random.randint(0, 1)
+            else:
+                print("----------------------")
+                print('''Attempts: %s, Awerses: %s, Reverses: %s
+Goodbye ;)''' % (attempts, awerses, reverses))
+                break
+
+        elif rand <= 0:
+            if rand == 1:
+                attempts += 1
+                awerses += 1
+            else:
+                attempts += 1
+                reverses += 1
+
+            print("Reverse")
+            print("Wanna play again? y/n")
+            answer1 = input()
+            if  answer1 == 'y':
+                rand = random.randint(0, 1)
+            else:
+                print("----------------------")
+                print('''Attempts: %s, Awerses: %s, Reverses: %s
+Goodbye ;)''' % (attempts, awerses, reverses))
+                break
+    else:
+        print("Goodbye ;)")
+        break
